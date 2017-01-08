@@ -38,7 +38,21 @@ public class MainActivity extends AppCompatActivity
         txtOutput = (TextView)findViewById(R.id.txtOutput);
     }
 
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
+        // Connect the Client
+        mGoogleApiClient.connect();
+    }
 
+    @Override
+    protected void onStop()
+    {
+        // disconnect the client
+        mGoogleApiClient.disconnect();
+        super.onStop();
+    }
 
     @Override
     public void onConnected(@Nullable Bundle bundle)
