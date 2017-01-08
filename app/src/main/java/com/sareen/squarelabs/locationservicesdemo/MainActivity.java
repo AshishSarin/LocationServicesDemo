@@ -97,12 +97,13 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onConnectionSuspended(int i)
     {
-        Log.i(LOG_TAG, "GoogleApiClient connection is suspended.");
+        Log.i(LOG_TAG, "Connection suspended");
+        mGoogleApiClient.connect();
     }
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult)
     {
-        Log.i(LOG_TAG, "GoogleApiClient connection has failed.");
+        Log.i(LOG_TAG, "Connection failed: " + connectionResult.getErrorCode());
     }
 }
