@@ -12,9 +12,46 @@
     tools:context="com.sareen.squarelabs.locationservicesdemo.MainActivity">
 
     <TextView
-        android:id="@+id/txtOutput"
+        android:id="@+id/latitude_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Location Goes Here"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/text_label_latitude"
+        android:textSize="16sp"/>
+
+
+    <TextView
+        android:id="@+id/latitude_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Latitude Goes Here"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        android:textIsSelectable="true"
+        android:layout_toRightOf="@id/latitude_label"
+        android:layout_alignBaseline="@id/latitude_label"/>
+
+    <TextView
+        android:id="@+id/longitude_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/longitude"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="24dp"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/longitude_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Longitude Goes Here"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        android:textIsSelectable="true"
+        android:layout_marginTop="24dp"
+        android:layout_alignBaseline="@id/longitude_label"
+        android:layout_toRightOf="@id/longitude_label"/>
 
 </RelativeLayout>
