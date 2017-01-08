@@ -57,6 +57,13 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onConnected(@Nullable Bundle bundle)
     {
+        mLocationRequest = LocationRequest.create();
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        mLocationRequest.setInterval(1000);         // Update location every second
+
+        //TODO Add runtime permission
+        LocationServices.FusedLocationApi.requestLocationUpdates
+                (mGoogleApiClient, mLocationRequest, this);
 
     }
 
