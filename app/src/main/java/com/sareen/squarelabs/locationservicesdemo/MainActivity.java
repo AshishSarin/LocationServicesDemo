@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity
         LocationListener
 {
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
-    private TextView txtOutput;                                                 // textView for showing location coordinates
+    private TextView txtOutput;
     private GoogleApiClient mGoogleApiClient;
     private LocationRequest mLocationRequest;
 
@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
                 .build();
+
+        txtOutput = (TextView)findViewById(R.id.txtOutput);
     }
 
 
