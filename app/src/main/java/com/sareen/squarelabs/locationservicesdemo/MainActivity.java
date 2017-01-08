@@ -18,9 +18,8 @@ public class MainActivity extends AppCompatActivity
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener
 {
-
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
-    private TextView txtOutput;
+    private TextView txtOutput;                                                 // textView for showing location coordinates
     private GoogleApiClient mGoogleApiClient;
     private LocationRequest mLocationRequest;
 
