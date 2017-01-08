@@ -1,10 +1,11 @@
 package com.sareen.squarelabs.locationservicesdemo;
 
 import android.location.Location;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -70,18 +71,19 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onConnectionSuspended(int i)
     {
-
+        Log.i(LOG_TAG, "GoogleApiClient connection is suspended.");
     }
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult)
     {
-
+        Log.i(LOG_TAG, "GoogleApiClient connection has failed.");
     }
 
     @Override
     public void onLocationChanged(Location location)
     {
-
+        Log.i(LOG_TAG, location.toString());
+        txtOutput.setText(Double.toString(location.getLatitude()));
     }
 }
